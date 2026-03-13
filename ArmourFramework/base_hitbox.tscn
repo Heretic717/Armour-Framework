@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bqp48o4vagly"]
+
+[ext_resource type="PackedScene" uid="uid://bebgabc7cn4g4" path="res://test_hurtbox.tscn" id="1_j3k74"]
+[ext_resource type="PackedScene" uid="uid://d2c52yaykwtnn" path="res://character_body_3d.tscn" id="2_48037"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go42g"]
+albedo_color = Color(1, 0.48235294, 0.3764706, 1)
+metallic = 0.65
+roughness = 0.74
+
+[sub_resource type="BoxMesh" id="BoxMesh_sreuk"]
+material = SubResource("StandardMaterial3D_go42g")
+
+[node name="Node3D" type="Node3D" unique_id=1019160421]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1392835828]
+transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("BoxMesh_sreuk")
+
+[node name="TestHurtbox2" parent="." unique_id=1000997899 instance=ExtResource("1_j3k74")]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 2.0882437, 0.94977856, 0)
+disable_mode = 0
+max_contacts_reported = 4
+
+[node name="CharacterBody3D" parent="." unique_id=148623396 instance=ExtResource("2_48037")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9082508, 14.10857)
+
+[node name="TestHurtbox3" parent="." unique_id=16870693 instance=ExtResource("1_j3k74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076381445, 0.94977856, 0)
+disable_mode = 0
+max_contacts_reported = 4
+
+[node name="TestHurtbox4" parent="." unique_id=1839205288 instance=ExtResource("1_j3k74")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 3.4341228, 0.94977856, 0)
+disable_mode = 0
+max_contacts_reported = 4
+
+[node name="TestHurtbox5" parent="." unique_id=922398955 instance=ExtResource("1_j3k74")]
+transform = Transform3D(0.8660254, 0.25, -0.4330127, 0, 0.8660254, 0.5, 0.5, -0.4330127, 0.75, 4.684886, 0.94977856, 0)
+disable_mode = 0
+max_contacts_reported = 4
