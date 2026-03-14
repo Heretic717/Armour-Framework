@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cvvx4n1f1pohs"]
+
+[ext_resource type="PackedScene" uid="uid://csbh31c8em3go" path="res://test_hurtbox.tscn" id="1_cguwc"]
+[ext_resource type="PackedScene" uid="uid://cu8obtuktgnby" path="res://character_body_3d.tscn" id="2_wicfy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go42g"]
+albedo_color = Color(1, 0.48235294, 0.3764706, 1)
+metallic = 0.65
+roughness = 0.74
+
+[sub_resource type="BoxMesh" id="BoxMesh_sreuk"]
+material = SubResource("StandardMaterial3D_go42g")
+
+[node name="Node3D" type="Node3D" unique_id=1019160421]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1392835828]
+transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("BoxMesh_sreuk")
+
+[node name="CharacterBody3D" parent="." unique_id=148623396 instance=ExtResource("2_wicfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.101357, 10.579584)
+
+[node name="TestHurtbox" parent="." unique_id=16870693 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85458136, 0)
+physics_material_override = null
+
+[node name="TestHurtbox2" parent="." unique_id=53352417 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 1.7479026, 0.85458136, 0)
+physics_material_override = null
+
+[node name="TestHurtbox3" parent="." unique_id=956121165 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1644282, 0.85458136, 0)
+physics_material_override = null
+
+[node name="TestHurtbox4" parent="." unique_id=446708548 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 3.5277224, 0.72714615, 0)
+physics_material_override = null
+
+[node name="TestHurtbox5" parent="." unique_id=954480072 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 0.73135364, 0.6819983, 0, -0.6819983, 0.73135364, 4.9551964, 0.5881269, 0)
+physics_material_override = null
+
+[node name="TestHurtbox6" parent="." unique_id=1696399903 instance=ExtResource("1_cguwc")]
+transform = Transform3D(1, 0, 0, 0, 0.49999994, 0.8660254, 0, -0.8660254, 0.49999994, 6.462203, 0.615834, 0)
+physics_material_override = null
