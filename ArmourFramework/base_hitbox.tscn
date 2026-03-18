@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bqp48o4vagly"]
+
+[ext_resource type="Script" uid="uid://dtjs3eigqeqi2" path="res://BaseHitbox.cs" id="1_iehkm"]
+
+[node name="BaseHitbox" type="RayCast3D" unique_id=857064417]
+process_physics_priority = 1
+rotation_edit_mode = 1
+target_position = Vector3(0, 0, -1)
+collide_with_areas = true
+debug_shape_custom_color = Color(0.83137256, 0, 0, 1)
+debug_shape_thickness = 5
+script = ExtResource("1_iehkm")

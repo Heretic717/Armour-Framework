@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bebgabc7cn4g4"]
+
+[ext_resource type="PackedScene" uid="uid://csdts2yxuuglq" path="res://base_hurtbox.tscn" id="1_rsgtt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dj05k"]
+size = Vector3(1, 1, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6msxo"]
+
+[node name="TestHurtbox" unique_id=16870693 instance=ExtResource("1_rsgtt")]
+collision_mask = 0
+healthType = 1
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1945355582]
+shape = SubResource("BoxShape3D_dj05k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=671714584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_6msxo")

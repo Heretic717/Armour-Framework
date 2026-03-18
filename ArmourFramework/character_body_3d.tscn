@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d2c52yaykwtnn"]
+
+[ext_resource type="Script" uid="uid://cpquesihf3a5m" path="res://TestCharacter.cs" id="1_iwpo4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bu0v1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iwpo4"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=148623396]
+collision_layer = 0
+collision_mask = 0
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+motion_mode = 1
+script = ExtResource("1_iwpo4")
+Speed = 10
+rotationSpeed = 0.05
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=967223842]
+mesh = SubResource("CapsuleMesh_bu0v1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1859653404]
+shape = SubResource("CapsuleShape3D_iwpo4")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=27477225]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1121267201]
+transform = Transform3D(1, 0, 0, 0, 0.9754462, 0.22023782, 0, -0.22023782, 0.9754462, -0.16369572, 1.3182604, 2.8141577)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CameraPivot" unique_id=1113544654]
+transform = Transform3D(1, 0, 0, 0, 0.9793783, 0.20203526, 0, -0.20203526, 0.9793782, -0.16076645, 1.2981663, 2.7617297)
+
+[node name="ProjectileOrigin" type="Node3D" parent="." unique_id=1327101579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.70590734)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ctprporwqvngk"]
+
+[ext_resource type="PackedScene" uid="uid://bqp48o4vagly" path="res://base_hitbox.tscn" id="1_u78ab"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u78ab"]
+albedo_color = Color(0.27058825, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lsq1i"]
+material = SubResource("StandardMaterial3D_u78ab")
+
+[node name="TestProjectile" unique_id=1131905677 instance=ExtResource("1_u78ab")]
+damage = 2
+hitType = 1
+projectileLife = 5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0" unique_id=1648713045]
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, -0.2, 0, 0.2, -8.742278e-09, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_lsq1i")

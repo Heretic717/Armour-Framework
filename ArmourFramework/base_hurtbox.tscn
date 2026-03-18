@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://csdts2yxuuglq"]
+
+[ext_resource type="Script" uid="uid://cjf2hhjh5r1kg" path="res://BaseHurtbox.cs" id="1_uig4v"]
+
+[node name="BaseHurtbox" type="AnimatableBody3D" unique_id=415754437]
+rotation_order = 0
+disable_mode = 2
+script = ExtResource("1_uig4v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1945355582]
+
+[node name="thickray" type="RayCast3D" parent="." unique_id=1592897673]
+enabled = false
+exclude_parent = false
+debug_shape_custom_color = Color(0, 0.90588236, 0.92941177, 1)
+debug_shape_thickness = 5
